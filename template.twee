@@ -1,0 +1,1405 @@
+:: StoryTitle
+Common Ground Template
+
+
+:: StoryData
+{
+	"ifid": "F9E39354-F641-4070-8B45-C310A3FDC8C1",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "10",
+	"zoom": 1
+}
+
+
+:: Story Stylesheet [stylesheet]
+
+/* GENERAL STYLES */
+
+@font-face {
+    font-family: "Arcon";
+    src: url("./assets/fonts/arcon/Arcon-Regular.otf");
+}
+@font-face {
+    font-family: "SpecialElite";
+    src: url("./assets/fonts/special-elite/SpecialElite.ttf");
+}
+
+body {
+	background-color: #000;
+	font-family: "Arcon", monospace;
+	font-size: 10px;
+	height: 100vh;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+}
+
+body[data-tags~="t8n-dissolve"] .transition-in {
+  position: absolute;
+  opacity: 0;
+}
+body[data-tags~="t8n-dissolve"] .passage {
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+body[data-tags~="t8n-dissolve"] .transition-out {
+  position: absolute;
+  opacity: 0;
+}
+
+a {
+  color: #f2647d;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#story a.link-external:after {
+	content: "";
+}
+#passages {
+	max-width: 100%;
+	font-size: 1.3rem;
+}
+
+#story {
+	margin: 0
+}
+
+main{
+	padding: 5vw;
+    width: 85vw
+}
+
+.main-section{
+    background:#000
+}
+
+
+button{
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 3px;
+}
+
+button:hover{
+	background-color:#cf1b98;
+	border: #fff 1px solid;
+	color: #fff;
+}
+
+img.parrots {
+  max-width: 300px
+}
+
+.door-container{
+  display:flex;
+  flex-direction: row;
+justify-content: space-around;
+  align-items:center;
+  text-align: right;
+}
+
+.door-item{
+  display:flex;
+  flex-direction:column
+}
+
+.door-item > button > img {
+  max-width: 7rem
+}
+
+.door-item > span {
+  text-align: center
+}
+
+.animal-container{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center
+}
+.animal{
+  max-width: 10rem;
+}
+
+
+/* MOBILE  */
+
+@media screen and (max-width: 700px) {
+	#passages {
+height: 100%;
+overflow: scroll;
+	font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#story {
+height: 100%
+}
+
+#passage-prestart{
+	height: 100%
+}
+
+main {
+	height: 100%;
+	padding: 5vw;
+}
+
+a:active {
+  background-color: #f2647d;
+}
+
+input[type=text] {
+    min-width: 14em;
+}
+
+}
+
+/* LANDING PAGE */
+
+.landing{
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+background-image: url("./assets/img/coneybg.jpg");
+    color: #000 ;
+    height:100vh;
+    width:100vw;
+
+}
+
+.landing-wrapper{
+        background: #fff;   
+        width:85vw;
+        padding: 3.5vw;
+        display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction: column;
+}
+
+.landing > h1 {
+	font-weight: 500
+}
+
+#resultbutton > button {
+	background-color:#000;
+	border: #fff 1px solid;
+	color: #fff;
+}
+
+
+.landing > button:hover {
+	background-color:#f2647d;
+	border: #fff 1px solid;
+	color: #fff;
+}
+
+.title{
+font-weight: 100;
+font-size: 3rem;
+}
+
+.story-title{
+font-weight: 100;
+font-size: 1.6rem;
+}
+
+.logo{
+    max-width: 40%;
+}
+
+@media screen and (max-width: 700px) {
+.title {
+font-weight: 100;
+font-size: 3rem;
+}
+
+.logo{
+    max-width: 90%;
+}
+}
+
+/* ANIMATION */
+
+.coneylogoglitch{
+	/* position:absolute;
+    width: 529px; */
+  opacity: 0.85;
+	transform:translate(80px, 0px);
+	 animation: 1s logoglitch linear infinite both;
+}
+
+@keyframes logoglitch {
+  0% 		{width:590px;transform:translate(60px, 40px)}
+  49.999%	{width:590px;transform:translate(60px, 40px)}
+  50%		{width:300px;transform:translate(500px, 0px)}
+  54.999%	{width:300px;transform:translate(500px, 0px)}
+  55%		{width:590px;transform:translate(60px, 40px)}
+  94.999%	{width:590px;transform:translate(60px, 40px)}
+  95%		{width:300px;transform:translate(500px, 0px)}
+  99.999%	{width:300px;transform:translate(500px, 0px)}
+  100%		{width:590px;transform:translate(60px, 40px)}
+}
+
+.glitch-shape1{    
+  background-color: cyan;
+  position:absolute;
+  width: 100px;
+  height: 500px;
+  opacity: 0.85;
+  animation: 2s glitchshape1 steps(5, start) infinite forwards;
+}
+.glitch-shape2{    
+  background-color: rgb(0, 204, 51);
+  position:absolute;
+  width: 100px;
+  height: 500px;
+  opacity: 0.85;
+  animation: 2s glitchshape2 steps(5, start) infinite forwards reverse;
+}
+.glitch-shape3{    
+  background-color: cyan;
+  position:absolute;
+  width: 979px;
+  height: 24px;
+  opacity: 0.85;
+  animation: 1s glitchshape3 linear infinite forwards;
+}
+.glitch-shape4{    
+  background-color: blue;
+  position:absolute;
+  width: 2000px;
+  height: 40px;
+  transform:translate(-100px, 30px);
+}
+.glitch-shape5{    
+  background-color: black;
+  position:absolute;
+  width: 525px;
+  height: 92px;
+  transform:translate(20px, 500px);
+}
+
+@keyframes glitchshape1 {
+  0% 	{background-color:#70fdee; width:1000px;height:300px;transform:translate(690px, 49px)}
+  25%	{background-color: #cb3d24; width:540px;height:1049px;transform:translate(-355px, -1380px)}
+  50%	{background-color: #1abf35; width:68px;height:456px;transform:translate(880px, 936px)}
+  75%	{background-color: #f2952c; width:1078px;height:366px;transform:translate(314px, -330px)}
+  100%	{background-color: #3a9e8d; width:816px;height:1196px;transform:translate(-1020px,
+361px)}
+}
+
+@keyframes glitchshape2 {
+  0% 	{background-color: #5059ab; width:663px;height:1199px;transform:translate(489px,207px)}
+  25%	{background-color: #dc1b02; width:1220px;height:300px;transform:translate(-95px, 345px)}
+  50%	{background-color: #ef2556; width:723px;height:938px;transform:translate(1195px, 614px)}
+  75%	{background-color: #e3bcc0; width:1238px;height:508px;transform:translate(1200px, -106px)}
+  100%	{background-color: #f266a4; width:68px;height:456px;transform:translate(-20px, 669px)}
+}
+@keyframes glitchshape3 {
+  0% 	{transform:translate(900px, 800px)}
+  100%	{transform:translate(1000px,800px)}
+}
+
+.filmgrain{
+    position: absolute;
+  top: -500px;
+  right: -500px;
+  bottom: -500px;
+  left: -500px;
+  z-index: -1;
+  background: transparent url("./assets/img/filmgrain.gif") 0 0;
+  background-size: 1000px;
+  opacity: 0.25;
+  overflow: hidden
+}
+
+.imgfadeout{
+	animation: 6.5s imgfadeout ease 1 forwards;
+}
+
+@keyframes imgfadeout {
+  0% 	{ opacity: 1; }
+  100%	{ opacity: 0; }
+}
+
+@keyframes bgfadeout {
+  0% 	{ background-color: rgba(255, 255, 255, 1) }
+  100%	{ background-color: rgba(255, 255, 255, 0) }
+}
+
+@keyframes bgfadein {
+  0% 	{ background-color: rgba(255, 255, 255, 0) }
+  100%	{ background-color: rgba(255, 255, 255, 1) }
+}
+
+.whitebgfadein{    
+  background-color: white;
+    position:absolute;
+	top:3%;
+  	bottom:3%;
+  	left:2%;
+  	right:2%;
+  z-index: 1;
+  animation: 6.5s bgfadein ease 1 forwards;
+}
+
+.whitebgfadeout{    
+  background-color: white;
+    position:absolute;
+	top:3%;
+  	bottom:3%;
+  	left:2%;
+  	right:2%;
+  z-index: 1;
+  animation: 6.5s bgfadeout ease 1 forwards;
+}
+
+
+
+.psa{
+  font-family: 'SpecialElite', sans-serif;
+	font-size: 20px;
+  font-weight: 500;
+	color: white;
+  background-color:transparent;
+}
+
+.psalogobright{
+    position:absolute;
+  	top: 50%;
+   left: 50%;
+   width: 750px;
+   height: 750px;
+   margin-top: -375px; /* Half the height */
+   margin-left: -375px; /* Half the width */
+  filter: brightness(100%);
+   	z-index: -1;
+}
+
+.psalogodark{
+    position:absolute;
+  	top: 50%;
+   left: 50%;
+   width: 750px;
+   height: 750px;
+   margin-top: -375px; /* Half the height */
+   margin-left: -375px; /* Half the width */
+  filter: brightness(27%);
+   	z-index: -2;
+}
+
+.psabg{
+  background-image: url(./assets/img/coneybg_dark.jpg);  
+    position:absolute;
+	top:0%;
+  	bottom:0%;
+  	left:0%;
+  	right:0%;
+  z-index: -10;
+}
+
+.normal{
+  font-family: 'SpecialElite', sans-serif;
+	font-size: 25px;
+  font-weight: 500;
+	color: black;
+  /*background-color:white;
+  background-blend-mode: normal;*/
+}
+.whitebg{    
+  background-color: white;
+    position:absolute;
+	top:3%;
+  	bottom:3%;
+  	left:2%;
+  	right:2%;
+  z-index: -3;
+}
+.blackbg{    
+  background-color: black;
+    position:absolute;
+	top:0%;
+  	bottom:0%;
+  	left:0%;
+  	right:0%;
+}
+.glitchwhitebg{    
+  background-color: white;
+    position:absolute;
+	top:3%;
+  	bottom:3%;
+  	left:2%;
+  	right:2%;
+  z-index: -3;
+  animation: 0.1s bgglitch linear infinite forwards;
+}
+
+.whitebgfadein{    
+  background-color: white;
+    position:absolute;
+	top:3%;
+  	bottom:3%;
+  	left:2%;
+  	right:2%;
+  z-index: 1;
+  animation: 6.5s bgfadein ease 1 forwards;
+}
+
+.whitebgfadeout{    
+  background-color: white;
+    position:absolute;
+	top:3%;
+  	bottom:3%;
+  	left:2%;
+  	right:2%;
+  z-index: 1;
+  animation: 6.5s bgfadeout ease 1 forwards;
+}
+
+.coneylogoglitch{
+	position:absolute;
+    width: 529px;
+  opacity: 0.85;
+	transform:translate(80px, 0px);
+	 animation: 1s logoglitch linear infinite both;
+}
+
+.filmgrain{
+    position: absolute;
+  top: -500px;
+  right: -500px;
+  bottom: -500px;
+  left: -500px;
+  z-index: -1;
+  background: transparent url(./assets/img/filmgrain.gif) 0 0;
+  background-size: 1000px;
+  opacity: 0.25;
+  overflow: hidden
+}
+
+.glitch-shape1{    
+  background-color: cyan;
+  position:absolute;
+  width: 100px;
+  height: 500px;
+  opacity: 0.85;
+  animation: 2s glitchshape1 steps(5, start) infinite forwards;
+}
+.glitch-shape2{    
+  background-color: rgb(0, 204, 51);
+  position:absolute;
+  width: 100px;
+  height: 500px;
+  opacity: 0.85;
+  animation: 2s glitchshape2 steps(5, start) infinite forwards reverse;
+}
+.glitch-shape3{    
+  background-color: cyan;
+  position:absolute;
+  width: 979px;
+  height: 24px;
+  opacity: 0.85;
+  animation: 1s glitchshape3 linear infinite forwards;
+}
+.glitch-shape4{    
+  background-color: blue;
+  position:absolute;
+  width: 2000px;
+  height: 40px;
+  transform:translate(-100px, 30px);
+}
+.glitch-shape5{    
+  background-color: black;
+  position:absolute;
+  width: 525px;
+  height: 92px;
+  transform:translate(20px, 500px);
+}
+
+@keyframes bgglitch {
+  0% 	{transform:translate(0px, 0px)}
+  100%	{transform:translate(-20px,20px)}
+}
+
+@keyframes logoglitch {
+  0% 		{width:590px;transform:translate(60px, 40px)}
+  49.999%	{width:590px;transform:translate(60px, 40px)}
+  50%		{width:300px;transform:translate(500px, 0px)}
+  54.999%	{width:300px;transform:translate(500px, 0px)}
+  55%		{width:590px;transform:translate(60px, 40px)}
+  94.999%	{width:590px;transform:translate(60px, 40px)}
+  95%		{width:300px;transform:translate(500px, 0px)}
+  99.999%	{width:300px;transform:translate(500px, 0px)}
+  100%		{width:590px;transform:translate(60px, 40px)}
+}
+
+@keyframes glitchshape1 {
+  0% 	{background-color:#70fdee; width:1000px;height:300px;transform:translate(690px, 49px)}
+  25%	{background-color: #cb3d24; width:540px;height:1049px;transform:translate(-355px, -1380px)}
+  50%	{background-color: #1abf35; width:68px;height:456px;transform:translate(880px, 936px)}
+  75%	{background-color: #f2952c; width:1078px;height:366px;transform:translate(314px, -330px)}
+  100%	{background-color: #3a9e8d; width:816px;height:1196px;transform:translate(-1020px,
+361px)}
+}
+
+@keyframes glitchshape2 {
+  0% 	{background-color: #5059ab; width:663px;height:1199px;transform:translate(489px,207px)}
+  25%	{background-color: #dc1b02; width:1220px;height:300px;transform:translate(-95px, 345px)}
+  50%	{background-color: #ef2556; width:723px;height:938px;transform:translate(1195px, 614px)}
+  75%	{background-color: #e3bcc0; width:1238px;height:508px;transform:translate(1200px, -106px)}
+  100%	{background-color: #f266a4; width:68px;height:456px;transform:translate(-20px, 669px)}
+}
+@keyframes glitchshape3 {
+  0% 	{transform:translate(900px, 800px)}
+  100%	{transform:translate(1000px,800px)}
+}
+
+.logoToGlitch {
+  width: 9rem;
+}
+
+.message-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 1rem;
+}
+
+.message-container{
+ background-color: #fff;
+    /* background: url(http://remote.co.com/UCA/assets/img/paperbackground.jpg); */
+    padding: 1.5rem;
+    color: black;
+    flex-grow: 1;
+   border-radius: 10px 10px 10px 0;
+    flex-grow:1
+  }
+
+.message-circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+}
+/* //////// */
+
+input[type="text"] {
+  text-align: center;
+ 	color: black;
+	background-color: white;
+}
+input[type="text"]:hover {
+  text-align: center;
+	color: white;	
+  	background-color: black;
+}
+input[type="text"]:focus{
+  text-align: center;
+	color: white;	
+  	background-color: black;
+}
+
+.biginput input[type="text"] {
+  text-align: center;
+ 	color: #9900ff;
+  background-color: black;
+  font-size: 35px;
+}
+.biginput input[type="text"]:hover {
+  text-align: center;
+	color: black;	
+  	background-color: #9900ff;
+  font-size: 35px;
+}
+.biginput input[type="text"]:focus{
+  text-align: center;
+	color: #9900ff;	
+  	background-color: black;
+  font-size: 35px;
+}
+
+.center-fit { 
+    display: block;
+  height:auto; 
+  width:auto; 
+    margin-left: auto;
+  margin-right: auto;
+  max-height:100%;
+  max-width:90%;
+}
+
+.voice-text{
+  font-size: 30px;
+  text-align: center;
+}
+
+.normal button {
+   background-color: white;
+  color: black;
+  border: 2.5px solid black;
+	border-radius: 2px;
+}
+.normal button:hover{
+color: white;
+  background-color:black;
+}
+
+.psa button {
+   background-color: black;
+  color: white;
+  border: 2.5px solid white;
+	border-radius: 2px;
+}
+
+.psa button:hover{
+color: black;
+  background-color:white;
+}
+
+.frontButton button{
+   background-color: black;
+  color: #9900ff;
+  border: 2.5px solid #9900ff;
+	border-radius: 15px;
+}
+
+.frontButton button:hover{
+color: black;
+  background-color: #9900ff;
+}
+
+@keyframes bgfadein {
+  0% 	{ background-color: rgba(255, 255, 255, 0) }
+  100%	{ background-color: rgba(255, 255, 255, 1) }
+}
+
+@keyframes bgfadeout {
+  0% 	{ background-color: rgba(255, 255, 255, 1) }
+  100%	{ background-color: rgba(255, 255, 255, 0) }
+}
+
+.imgfadein{
+	animation: 6.5s imgfadein ease 1 forwards;
+}
+
+.imgfadeout{
+	animation: 6.5s imgfadeout ease 1 forwards;
+}
+
+.imgfadeinfast{
+	animation: 2s imgfadein ease 1 forwards;
+}
+
+.imgfadeoutfast{
+	animation: 2s imgfadeout ease 1 forwards;
+}
+
+.imgfadeinhalf{
+      position:absolute;
+  	top: 50%;
+   left: 50%;
+   width: 750px;
+   height: 750px;
+   margin-top: -375px; /* Half the height */
+   margin-left: -375px; /* Half the width */
+  filter: brightness(27%);
+   	z-index: -1;
+	animation: 2s imgfadeinhalf ease 1 both;
+}
+
+.imgfadeouthalf{
+      position:absolute;
+  	top: 50%;
+   left: 50%;
+   width: 750px;
+   height: 750px;
+   margin-top: -375px; /* Half the height */
+   margin-left: -375px; /* Half the width */
+  filter: brightness(100%);
+   	z-index: -1;
+	animation: 2s imgfadeouthalf ease 1 both;
+}
+
+
+@keyframes imgfadein {
+  0% 	{ opacity: 0; }
+  100%	{ opacity: 1; }
+}
+
+@keyframes imgfadeout {
+  0% 	{ opacity: 1; }
+  100%	{ opacity: 0; }
+}
+
+@keyframes imgfadeinhalf {
+  0% 	{ filter: brightness(27%); }
+  100%	{ filter: brightness(100%); }
+}
+@keyframes imgfadeouthalf {
+  0% 	{ filter: brightness(100%); }
+  100%	{ filter: brightness(27%); }
+}
+
+.delete-effect{
+animation: .8s delete infinite alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes delete {
+  0% { transform: skewX(-15deg); filter:drop-shadow(-5px -20px 0px blue);}
+  10% { transform: skewY(-5deg); filter:drop-shadow(-10px 10px 0px lime);}
+  20% { transform: skewX(-15deg); filter:drop-shadow(8px 10px 0px red);}
+  30% { transform: skewY(10deg);filter:drop-shadow(-10px 10px 0px lime);}
+  40% { transform: skewX(-20deg); filter:drop-shadow(-5px -20px 0px blue);}
+  50% { transform: skewX(15deg); filter:drop-shadow(8px 10px 0px red);}
+  60% { transform: skewX(-15deg); filter:drop-shadow(-5px -20px 0px lime);}
+  70% { transform: skewY(-5deg); filter:drop-shadow(-10px 10px 0px blue);}
+  80% { transform: skewX(-15deg); filter:drop-shadow(8px 10px 0px red);}
+  90% { transform: skewY(10deg);filter:drop-shadow(-10px 10px 0px lime);}
+  100% { transform: skewX(15deg); filter:drop-shadow(8px 10px 0px red);}
+}
+
+.noise {
+  position: absolute;
+  top: -500px;
+  right: -500px;
+  bottom: -500px;
+  left: -500px;
+  z-index: 10;
+  background: transparent url(./assets/img/noise.png) 0 0;
+  background-size: 320px 320px;
+	opacity: .75;
+	animation: noise 1s steps(8,end) infinite both;
+}
+
+@keyframes noise {
+  0% {
+    transform: translateX(0px,0px); }
+  10% {
+    transform: translate(-100px, 100px);
+  }
+  20% {
+    transform: translate(150px, -100px);
+  }
+  30% {
+    transform: translate(-100px,100px);
+  }
+  40% {
+    transform: translate(100px, -150px);
+  }
+  50% {
+    transform: translate(-100px, 200px);
+  }
+  60% {
+    transform: translate(-200px, -100px);
+  }
+  70% {
+    transform: translateY(50px, 100px);
+  }
+  80% {
+    transform: translate(100px, -150px);
+  }
+  90% {
+    transform: translate(0px, 200px);
+  }
+  100% {
+    transform: translate(-100px, 100px);
+  }
+}
+
+
+
+:: Story JavaScript [script]
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();
+
+!function() {
+    postrender.typewriter = function (b) {
+        if (this.tags) {
+            var r = new RegExp("t8n.typewriter.([0-9]+)(?:[^0-9]|$)","g");
+            var t = r.exec(this.tags.toString());
+            if (t) {
+                typeout(b, t[1]+0);
+            }
+        }
+        return b;
+    };
+    var typeout = function(c,t) {
+        var Furl = function(current) {
+            this.n = current;
+            this.out = false;
+            this.data = current.nodeValue;
+            current.nodeValue = "";
+            this.kids = [];
+            var cn = current.childNodes;
+            if (current.style && current.style.display=="none") {
+                return;
+            }
+            while (cn.length>0) {
+                var f = new Furl(cn[0]);
+                current.removeChild(cn[0]);
+                f.out = true;this.kids.push(f);
+            }
+        };
+        var nodes = new Furl(c);
+        var unfurl = function(furled,d) {
+            var n = furled.n;
+            if (furled.out) {
+                d.appendChild(n);
+                furled.out = false;
+            }
+            if (furled.data) {
+                n.nodeValue += furled.data[0];
+                furled.data = furled.data.slice(1);
+                return true;
+            }
+            for (var j=0; j<furled.kids.length; j++) {
+                var ret = unfurl(furled.kids[j],n);
+                if (ret) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        var title = passage();
+        var intr = setInterval (
+            function() {
+                if (passage() == title && unfurl(nodes,null)) {
+                    return;
+                }
+                clearInterval(intr);
+            }
+        ,t);
+    };
+}();
+
+:: StoryInit
+<<cacheaudio "coneytheme" "./assets/audio/Coney_Theme.mp3">>
+<<waitforaudio>>
+
+
+:: landing {"position":"425,75","size":"100,100"}
+<main class="landing">
+<div class="landing-wrapper">
+    <img src="./assets/img/coney-logo-white.jpg" class="logo  "><h1 id="coderesult" class="code-title">Enter codeword:</h1>
+    \/% PASSWORD FEEDBACK %/
+          \   <div id="resultbutton">
+          \/% PASSWORD INPUT %/
+          \<div class="css-input code-input">\
+          <<textbox "$codeword" "">></div>
+          <<button "Enter">>
+</div>
+</main>     
+      
+      \/% PASSWORD CODE %/
+      \ <<set $codeword to $codeword.toUpperCase()>>
+      \
+      \/% PASSWORD CORRECT %/
+      <<if $codeword isnot "" and $codeword is "TUTORIAL">>
+      <<replace "#coderesult">>
+      <</replace>><<replace "#resultbutton">><</replace>>
+      <<goto [[preglitch]]>>
+      <</if>>
+      \/% PASSWORD INCORRECT %/
+      <<if $codeword isnot "" and $codeword is not "TUTORIAL">>
+      <<replace "#coderesult">>Thats not right.<</replace>>
+      <</if>><</button>>
+
+:: preglitch
+<iframe id="iframeAudio" src="https://youhavefoundconey.net/CG/assets/audio/static.mp3" style="display:none" allow="autoplay" ></iframe>
+<div class="filmgrain"></div>
+<div class="glitch-shape1"></div>
+<div class="glitch-shape2"></div>
+<div class="glitch-shape3"></div>
+<<timed 12s>>
+<<goto "1">>
+<</timed>>
+
+
+
+:: 1  [t8n.typewriter-4]{"position":"425,200","size":"100,100"} 
+<main class="main-section">
+<p>Hello and welcome to the tutorial 
+
+This is really just a chance for us to show off
+
+Not to show off us
+
+But to show off what this type of digital play can do. 
+
+    
+<<timed 9s>><<goto "2">><</timed>>
+</p>
+
+</main>
+
+::  2 [t8n.typewriter-4]{"position":"425,325","size":"100,100"}
+<main class="main-section">
+That was a page turning
+
+We can make pages turn automatically so that the text is smooth
+
+Or we can build in breaks so we can give shorter instructions
+
+And ask the player when they want to move on
+
+When you are ready to move on press <<button "Next">> <<goto "3">><</button>>
+
+    /* <<timed 5s>> <<button "Next">> <<goto "3">><</button>><</timed>> */
+</main>    
+
+::  3  [t8n.typewriter-4]{"position":"425,450","size":"100,100"}
+<main class="main-section">
+   Great work. 
+
+We can also give players options – branching off into different directions
+
+Imagine it is like a tree
+And you follow one branch and then it branches further and further and further and further and further and further
+
+<<timed 12s>><<goto "Doors">><</timed>>
+
+</main>
+
+
+::  Doors  [t8n.typewriter-4]{"position":"425,450","size":"100,100"}
+<main class="main-section">
+It means you can give people options like…
+
+Do you want to go through...
+
+<div class="door-container">
+<<timed 4s>><div class="door-item"><span>DOOR A</span><<button [img["./assets/img/door-white.png"][Door A]]>><<goto "Door A">><</button>></div><</timed>>
+<<timed 5s>><div class="door-item"><span>or</span></div><</timed>>
+<<timed 6s>><div class="door-item"><span>DOOR B</span><<button [img["./assets/img/door-white.png"][Door B]]>><<goto "Door A">><</button>></div><</timed>>
+</div>
+</main>
+
+:: Door A  [t8n.typewriter-4]
+<main class="main-section">
+Do you want to go down the <<button "corridor ">><<goto "Corridor">><</button>> or into the  <<button "cellar ">><<goto "Cellar">><</button>> ?</main>
+
+/* TODO  make animals animate bigger*/
+
+:: Corridor
+<main class="main-section">
+<div class="animal-container"><img src="./assets/img/monster.png" class="animal"></div>
+<<timed 5s>><<goto "4">><</timed>>
+</main>
+
+:: Cellar
+<main class="main-section">
+<div class="animal-container"><img src="./assets/img/rabbit.png" class="animal"></div>
+<<timed 5s>><<goto "4">><</timed>>
+</main>
+
+
+
+:: Door B
+<main class="main-section">
+Do you want to go onto the <<button "roof">><<goto "Roof">><</button>> or the  <<button "balcony ">><<goto "Balcony">><</button>> ?</main>
+
+
+:: Roof
+<main class="main-section">
+<div class="animal-container"><img src="./assets/img/pigeon.png" class="animal"></div>
+<<timed 5s>><<goto "4">><</timed>>
+
+</main>
+
+:: Balcony
+<main class="main-section">
+<div class="animal-container"><img src="./assets/img/hippo.png" class="animal"></div>
+<<timed 5s>><<goto "4">><</timed>>
+
+</main>
+
+:: 4 [t8n.typewriter-4]
+<main class="main-section">
+There we go
+
+We had a choice and we ended up finding different animals
+
+Maybe...
+
+Maybe we all found the Rabbit. 
+
+<<button "Next">><<goto "5">><</button>>
+
+</main>
+
+
+:: 5 [t8n.typewriter-4]{"position":"425,575","size":"100,100"}
+<main class="main-section">
+We can also do challenges that require you to find words
+How many parrots do you see? 
+
+<img src="./assets/img/parrots.png" class="parrots">
+<div id="coderesult"></div>
+ \/% CODEWORD FEEDBACK %/
+\   <div id="resultbutton">
+\/% CODEWORD INPUT %/
+\<div class="css-input code-input">\
+<<textbox "$parrots" "">></div>
+<<button "Enter">>
+</div>
+</main>
+\/% CODEWORD CORRECT %/
+<<if $parrots isnot "" and $parrots is "2">>
+<<replace "#coderesult">>CORRECT<</replace>>
+<<timed 4s>><<goto [[6]]>><</timed>>
+<</if>>
+\/% CODEWORD INCORRECT %/
+<<if $parrots isnot "" and $parrots is not "2">>
+<<replace "#coderesult">>Thats not right.<</replace>>
+<<timed 1.5s>><<replace "#coderesult">><</replace>><</timed>>
+<</if>><</button>>
+
+
+
+:: 6 [t8n.typewriter-4]{"position":"425,700","size":"100,100"}
+<main class="main-section">
+OR we can make you find something in the space you are in.
+
+We quite like to use the digital world to make you connect more to the physical world
+
+So, finding ways to make people look up from the screen can be nice. 
+
+<<timed 8s>><<goto "6a">><</timed>>
+</main>
+
+:: 6a [t8n.typewriter-4]{"position":"425,700","size":"100,100"}
+<main class="main-section">
+Like, can you ask Toby or Rhianna, 
+
+"What is your favourite way to eat a potato?"
+
+And they’ll give you the codeword to move on
+
+<div id="coderesult"></div>
+ \/% CODEWORD FEEDBACK %/
+\   <div id="resultbutton">
+\/% CODEWORD INPUT %/
+\<div class="css-input code-input">\
+<<textbox "$potato" "">></div>
+<<button "Enter">>
+</div>
+</main>
+\/% CODEWORD CLEANUP %/
+<<set $potato to $potato.toUpperCase()>>
+\/% CODEWORD CORRECT %/
+<<if $potato isnot "" and $potato is "ROAST">>
+<<replace "#coderesult">>GREAT CHOICE<</replace>>
+<<timed 4s>><<goto [[7]]>><</timed>>
+<</if>>
+\/% CODEWORD INCORRECT %/
+<<if $potato isnot "" and $potato is not "ROAST">>
+<<replace "#coderesult">>Thats not right.<</replace>>
+<<timed 1.5s>><<replace "#coderesult">><</replace>><</timed>>
+<</if>><</button>>
+
+
+:: 7 [t8n.typewriter-4] {"position":"425,825","size":"100,100"}
+<main class="main-section">
+We can also get you to find bits in your environment – like a tour. 
+
+For example, we can get you to find the Queen of Hearts
+
+And to get you to tell us who she is next to
+
+<div id="coderesult"></div>
+ \/% CODEWORD FEEDBACK %/
+\   <div id="resultbutton">
+\/% CODEWORD INPUT %/
+\<div class="css-input code-input">\
+<<textbox "$queen" "">></div>
+<<button "Enter">>
+</div>
+</main>
+\/% CODEWORD CLEANUP %/
+<<set $queen to $queen.toUpperCase()>>
+\/% CODEWORD CORRECT %/
+<<if $queen isnot "" and $queen is "JOKER">>
+<<replace "#coderesult">>Correct.<</replace>>
+<<timed 4s>><<goto [[8]]>><</timed>>
+<</if>>
+\/% CODEWORD INCORRECT %/
+<<if $queen isnot "" and $queen is not "JOKER">>
+<<replace "#coderesult">>Thats not right.<</replace>>
+<<timed 1.5s>><<replace "#coderesult">><</replace>><</timed>>
+<</if>><</button>>
+
+
+
+:: 8 [t8n.typewriter-4]{"position":"425,975","size":"100,100"}
+<main class="main-section">
+We can even use that to bring these characters to life
+And hear a bad joke from the Joker. 
+
+
+Click <<button "here">><<audio "coneytheme" play>><<timed 5s>><<replace "#btnMount">><<button "Next">><<goto "9">><</button>><</replace>><</timed>><</button>> to hear the joker
+
+
+<div id="btnMount"></div>
+
+</main>
+
+
+:: 9 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+We can also get people to pick a place on a map they want to go
+
+We don’t have one as this is built for multiple locations
+
+BUT if you imagine we could tell people to go to the entrance
+
+When there ask the reception for a jar of milk.
+
+<<timed 5s>><<button "Next">><<goto "10">><</button>><</timed>>
+</main>
+
+
+:: 10 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+I mean don’t ask for that. 
+
+A jar of milk is strange. 
+
+    <<timed 4s>><<button "Next">><<goto "11">><</button>><</timed>>
+</main>
+
+
+
+:: 11 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+<<timed 0s>>We could setup a tour <</timed>>
+<<timed 1s>><img id="logoToGlitch" class="logoToGlitch" src="./assets/img/ConeyLogo.png" ><</timed>>
+
+
+<<timed 3s>>and then break it<</timed>>
+<<timed 4s>><<addclass "#logoToGlitch" "coneylogoglitch">><</timed>>
+    /* <<timed 5s>><<goto "glitch">><</timed>> */
+</main>
+<<timed 6s>><<goto "glitch">><</timed>>
+
+
+
+:: glitch
+
+/* TODO work on the message  */
+<main class="main-section">
+
+  <div id="msgMount" ></div>
+  <<timed 3s>>
+  Incoming Message -  <<button "Read">><<goto "message">><</button>><</timed>>
+  <iframe id="iframeAudio" src="https://youhavefoundconey.net/CG/assets/audio/static.mp3" style="display:none" allow="autoplay" ></iframe>
+  <div class="filmgrain"></div>
+  <div id="noise" class="noise">
+    <div class="glitch-shape1"></div>
+    <div class="glitch-shape2"></div>
+    <div class="glitch-shape3"></div>
+  </div>
+</main>
+   <<timed 4s>><<removeclass "#noise" "noise">><</timed>>
+
+
+:: message []
+<main class="main-section">
+<div class="message-wrapper">
+  <<timed 1.5s>><div class="message-circle"></div><</timed>>
+<<timed 2s>><div class="message-container">I'M OUT OF THE ROOM!
+</div><</timed>></div>
+    <<timed 3s>> <<button "Message received">><<goto "12">><</button>><</timed>>
+</main>
+
+
+:: 12 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+See that was fun. 
+
+    <<timed 5s>><<goto "13">><</timed>>
+</main>
+
+
+:: 13 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+We can use this platform as a way to facilitate players in a game
+To give them instructions and get them prepared to play
+We have to give them permission to play though
+Sometimes people don’t want to play
+So we will try to slowly introduce it and then hopefully they’ll be more comfortable. 
+We want them to enjoy playing
+
+
+ <<timed 5s>><<button "Next">><<goto "14">><</button>><</timed>>
+</main>
+
+
+:: 14 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+And we may want the play to start a conversation with them
+A conversation perhaps on something we want to talk to them about
+Something we think is important to bring up
+But perhaps is hard to have a direct, sit down, chat about
+So we make a game that helps make that easier. 
+
+ <<timed 5s>><<button "Next">><<goto "15">><</button>><</timed>>
+</main>
+
+
+:: 15 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+We want to have a good conversation. 
+Bad conversations are crap, and to be honest, pointless.
+So, we want to make a game that has a point. 
+
+
+ <<timed 5s>><<button "Next">><<goto "16">><</button>><</timed>>
+</main>
+
+:: 16 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+Well, there we go
+We’ve been rambling on
+Apologies
+But we hope it has given an insight into what we can make together. 
+
+</main>
+
+
+
+:: CONEYFADEIN
+
+<div class="whitebg"></div><div id="tohide" class="whitebgfadeout"></div>
+<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
+<span style = "font-size:50px">Coney x Barbican Box</span>
+<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
+<<textbox "$startcode" "" >></div>
+<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><</button>></div>
+
+</div><<audio "coneytheme" play>><<timed 8.5s>><<goto "CONEY">><</timed>>
+
+:: CONEY
+<div class="whitebg"></div>
+<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
+<span style = "font-size:50px">Coney x Barbican Box</span>
+<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
+<<textbox "$startcode" "" >></div>
+<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><<set $startcode to $startcode.toLowerCase()>>
+<<if $startcode is "landing">><<set $stage to 1>><<goto "TRANSTEST1">>
+
+<<else>>
+<<replace "#toChange">><span style = "color:red">INVALID CODEWORD. PLEASE TRY AGAIN.</span><</replace>><</if>><</button>></div>
+
+</div>
+
+
+:: TRANSTEST0
+<div class="whitebg"></div><div class="whitebgfadein"></div>
+<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
+<span style = "font-size:50px">Coney x Barbican Box</span>
+<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
+<<textbox "$startcode" "" >></div>
+<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><</button>></div>
+
+</div><<audio "coneytheme" play>><<timed 8.5s>><<goto "TRANSTEST9">><</timed>>
+
+:: TRANSTEST1
+
+<div class="whitebg"></div><div class="whitebgfadein"></div>
+<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
+<span style = "font-size:50px">Coney x Barbican Box</span>
+<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
+<<textbox "$startcode" "" >></div>
+<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><</button>></div>
+
+</div><<audio "instatic" play>><<timed 3.2s>><<goto "TRANSTEST2">><</timed>>
+
+
+:: TRANSTEST2
+<img class = "coneylogoglitch" src="./assets/img/ConeyLogo.png" ><div style = "text-align:right;">
+
+
+
+
+
+
+<span style = "font-size:50px">                   Coney x Barbican Box</span>
+
+<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
+<<textbox "$startcode" "" >></div>
+<div style = "font-family:'Arcon', sans-serif; text-align:none"><<button "ENTER" >><</button>></div>
+
+<div class="noise"></div><div class="glitchwhitebg"><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 0.5s>><<goto "TRANSTEST3">><</timed>>
+
+:: TRANSTEST3
+<div class="whitebg"></div>
+
+<<timed 0.5s>><<goto "TRANSTEST4">><</timed>>
+
+:: TRANSTEST4
+<img class = "coneylogoglitch" src="./assets/img/ConeyLogo.png" ><div style = "text-align:right;">
+
+
+
+
+
+
+<span style = "font-size:50px">                   Coney x Barbican Box</span>
+
+<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
+<<textbox "$startcode" "" >></div>
+<div style = "font-family:'Arcon', sans-serif; text-align:none"><<button "ENTER" >><</button>></div>
+
+<div class="noise"></div><div class="glitchwhitebg"><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 1.75s>><<goto "TRANSTEST5">><</timed>>
+
+
+:: TRANSTEST5
+<img class = "ConeyLogoglitch" style = "width:500px" src="./assets/img/psalogo_2.png" >
+
+<div class="noise"></div><div class="psabg"></div><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 1s>><<goto "TRANSTEST6">><</timed>>
+
+:: TRANSTEST6
+<div class="psabg"></div><img class="psalogobright" src="./assets/img/psalogo_2.png"><<timed 2s>><<goto "TRANSTEST7">><</timed>>
+
+:: TRANSTEST7
+<img class = "ConeyLogoglitch" style = "width:500px" src="./assets/img/psalogo_2.png" >
+
+<div class="noise"></div><div class="psabg"></div><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 2.5s>><<goto "TRANSTEST10">><</timed>>
+
+
+:: TRANSTEST8
+<div class="psabg"></div><img class="psalogobright" src="./assets/img/psalogo_2.png"><<timed 1.5s>><<goto "TRANSTEST9">><</timed>>
+
+:: TRANSTEST9
+<img class = "ConeyLogoglitch" style = "width:500px" src="./assets/img/psalogo_2.png" >
+
+<div class="noise"></div><div class="psabg"></div><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 0.2s>><<goto "TRANSTEST10">><</timed>>
+
+:: TRANSTEST10
+<div class="psabg"></div><img class="psalogobright" src="./assets/img/psalogo_2.png"><<nobr>>
+<<timed 1.2s>>
+<<goto "PSAFADEOUT">>
+<</timed>>
+<</nobr>>
+
+:: PSAFADEOUT
+
+<div class="psabg"></div><img class="imgfadeouthalf" src="./assets/img/psalogo_2.png">

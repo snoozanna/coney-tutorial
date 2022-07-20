@@ -7,7 +7,7 @@ Common Ground Template
 	"ifid": "F9E39354-F641-4070-8B45-C310A3FDC8C1",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "landing",
+	"start": "5",
 	"zoom": 1
 }
 
@@ -1054,7 +1054,7 @@ Like...
 
 
 :: 5b [t8n.typewriter-4]{"position":"425,575","size":"100,100"}
-<main class="main-section"><img src="./assets/img/parrots.png" class="parrots">
+<main class="main-section"><img src="./assets/img/parrots.png" class="parrots" id="parrotPic">
 How many parrots do you see? 
 <div id="coderesult"></div>
  \/% CODEWORD FEEDBACK %/
@@ -1068,7 +1068,7 @@ How many parrots do you see?
 \/% CODEWORD CORRECT %/
 <<if $parrots isnot "" and $parrots is "2">>
 <<replace "#coderesult">>CORRECT<</replace>>
-<<timed 4s>><<goto [[6]]>><</timed>>
+<<timed 3s>><<goto [[6]]>><</timed>>
 <</if>>
 \/% CODEWORD INCORRECT %/
 <<if $parrots isnot "" and $parrots is not "2">>
@@ -1271,9 +1271,11 @@ We want them to enjoy playing
 And we may want the play to start a conversation with them
 
 A conversation perhaps on something we want to talk to them about
+
 Something we think is important to bring up
 
 But perhaps is hard to have a direct, sit down, chat about
+
 So we make a game that helps make that easier. 
 
  <<timed 5s>><<button "Next">><<goto "15">><</button>><</timed>>

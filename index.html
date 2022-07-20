@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F9E39354-F641-4070-8B45-C310A3FDC8C1// --><tw-storydata name="Common Ground Template" startnode="2" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F9E39354-F641-4070-8B45-C310A3FDC8C1" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* GENERAL STYLES */
+	<!-- UUID://F9E39354-F641-4070-8B45-C310A3FDC8C1// --><tw-storydata name="Common Ground Template" startnode="15" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F9E39354-F641-4070-8B45-C310A3FDC8C1" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* GENERAL STYLES */
 
 @font-face {
     font-family: "Arcon";
@@ -1076,7 +1076,7 @@ We can also do challenges that require you to find words.
 Like...
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;5b&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="16" name="5b" tags="t8n.typewriter-4" position="425,575" size="100,100">&lt;main class=&quot;main-section&quot;&gt;&lt;img src=&quot;./assets/img/parrots.png&quot; class=&quot;parrots&quot;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="16" name="5b" tags="t8n.typewriter-4" position="425,575" size="100,100">&lt;main class=&quot;main-section&quot;&gt;&lt;img src=&quot;./assets/img/parrots.png&quot; class=&quot;parrots&quot; id=&quot;parrotPic&quot;&gt;
 How many parrots do you see? 
 &lt;div id=&quot;coderesult&quot;&gt;&lt;/div&gt;
  \/% CODEWORD FEEDBACK %/
@@ -1090,7 +1090,7 @@ How many parrots do you see?
 \/% CODEWORD CORRECT %/
 &lt;&lt;if $parrots isnot &quot;&quot; and $parrots is &quot;2&quot;&gt;&gt;
 &lt;&lt;replace &quot;#coderesult&quot;&gt;&gt;CORRECT&lt;&lt;/replace&gt;&gt;
-&lt;&lt;timed 4s&gt;&gt;&lt;&lt;goto [[6]]&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;&lt;&lt;goto [[6]]&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 \/% CODEWORD INCORRECT %/
 &lt;&lt;if $parrots isnot &quot;&quot; and $parrots is not &quot;2&quot;&gt;&gt;
@@ -1235,9 +1235,11 @@ We want them to enjoy playing
 And we may want the play to start a conversation with them
 
 A conversation perhaps on something we want to talk to them about
+
 Something we think is important to bring up
 
 But perhaps is hard to have a direct, sit down, chat about
+
 So we make a game that helps make that easier. 
 
  &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto &quot;15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;

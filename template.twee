@@ -7,7 +7,7 @@ Common Ground Template
 	"ifid": "F9E39354-F641-4070-8B45-C310A3FDC8C1",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "10",
+	"start": "5",
 	"zoom": 1
 }
 
@@ -70,7 +70,8 @@ a:hover {
 
 main{
 	padding: 5vw;
-    width: 85vw
+    width: 85vw;
+    margin-top: 3rem
 }
 
 .main-section{
@@ -92,6 +93,10 @@ button:hover{
 
 img.parrots {
   max-width: 300px
+}
+
+.parrot-input > input[type="text"] {
+  min-width: 14rem
 }
 
 .door-container{
@@ -122,7 +127,7 @@ justify-content: space-around;
   align-items:center
 }
 .animal{
-  max-width: 10rem;
+  max-width: 14rem;
 }
 
 
@@ -980,7 +985,7 @@ Do you want to go through...
 <div class="door-container">
 <<timed 4s>><div class="door-item"><span>DOOR A</span><<button [img["./assets/img/door-white.png"][Door A]]>><<goto "Door A">><</button>></div><</timed>>
 <<timed 5s>><div class="door-item"><span>or</span></div><</timed>>
-<<timed 6s>><div class="door-item"><span>DOOR B</span><<button [img["./assets/img/door-white.png"][Door B]]>><<goto "Door A">><</button>></div><</timed>>
+<<timed 6s>><div class="door-item"><span>DOOR B</span><<button [img["./assets/img/door-white.png"][Door B]]>><<goto "Door B">><</button>></div><</timed>>
 </div>
 </main>
 
@@ -1004,7 +1009,7 @@ Do you want to go down the <<button "corridor ">><<goto "Corridor">><</button>> 
 
 
 
-:: Door B
+:: Door B  [t8n.typewriter-4]
 <main class="main-section">
 Do you want to go onto the <<button "roof">><<goto "Roof">><</button>> or the  <<button "balcony ">><<goto "Balcony">><</button>> ?</main>
 
@@ -1040,15 +1045,22 @@ Maybe we all found the Rabbit.
 
 :: 5 [t8n.typewriter-4]{"position":"425,575","size":"100,100"}
 <main class="main-section">
-We can also do challenges that require you to find words
-How many parrots do you see? 
+We can also do challenges that require you to find words.
 
-<img src="./assets/img/parrots.png" class="parrots">
+Like...
+<<timed 5s>><<goto "5b">><</timed>>
+
+</main>
+
+
+:: 5b [t8n.typewriter-4]{"position":"425,575","size":"100,100"}
+<main class="main-section"><img src="./assets/img/parrots.png" class="parrots">
+How many parrots do you see? 
 <div id="coderesult"></div>
  \/% CODEWORD FEEDBACK %/
 \   <div id="resultbutton">
 \/% CODEWORD INPUT %/
-\<div class="css-input code-input">\
+\<div class="css-input code-input parrot-input">\
 <<textbox "$parrots" "">></div>
 <<button "Enter">>
 </div>
@@ -1074,7 +1086,7 @@ We quite like to use the digital world to make you connect more to the physical 
 
 So, finding ways to make people look up from the screen can be nice. 
 
-<<timed 8s>><<goto "6a">><</timed>>
+<<timed 10s>><<goto "6a">><</timed>>
 </main>
 
 :: 6a [t8n.typewriter-4]{"position":"425,700","size":"100,100"}
@@ -1238,12 +1250,16 @@ See that was fun.
 
 <main class="main-section">
 We can use this platform as a way to facilitate players in a game
-To give them instructions and get them prepared to play
-We have to give them permission to play though
-Sometimes people don’t want to play
-So we will try to slowly introduce it and then hopefully they’ll be more comfortable. 
-We want them to enjoy playing
 
+To give them instructions and get them prepared to play
+
+We have to give them permission to play though
+
+Sometimes people don’t want to play
+
+So we will try to slowly introduce it and then hopefully they’ll be more comfortable. 
+
+We want them to enjoy playing
 
  <<timed 5s>><<button "Next">><<goto "14">><</button>><</timed>>
 </main>
@@ -1253,8 +1269,10 @@ We want them to enjoy playing
 
 <main class="main-section">
 And we may want the play to start a conversation with them
+
 A conversation perhaps on something we want to talk to them about
 Something we think is important to bring up
+
 But perhaps is hard to have a direct, sit down, chat about
 So we make a game that helps make that easier. 
 
@@ -1266,7 +1284,9 @@ So we make a game that helps make that easier.
 
 <main class="main-section">
 We want to have a good conversation. 
+
 Bad conversations are crap, and to be honest, pointless.
+
 So, we want to make a game that has a point. 
 
 
@@ -1277,8 +1297,11 @@ So, we want to make a game that has a point.
 
 <main class="main-section">
 Well, there we go
+
 We’ve been rambling on
+
 Apologies
+
 But we hope it has given an insight into what we can make together. 
 
 </main>

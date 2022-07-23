@@ -71,7 +71,7 @@ a:hover {
 main{
 	padding: 5vw;
     width: 85vw;
-    margin-top: 3rem
+    margin-top: 6rem
 }
 
 .main-section{
@@ -93,6 +93,10 @@ button:hover{
 
 img.parrots {
   max-width: 300px
+}
+
+.img.joker > button > img {
+  max-width: 200px
 }
 
 .parrot-input > input[type="text"] {
@@ -177,6 +181,7 @@ background-image: url("./assets/img/coneybg.jpg");
     color: #000 ;
     height:100vh;
     width:100vw;
+    margin-top:0
 
 }
 
@@ -888,7 +893,8 @@ $(document.head).find('#style-ui-bar').remove();
 }();
 
 :: StoryInit
-<<cacheaudio "coneytheme" "./assets/audio/Coney_Theme.mp3">>
+<<cacheaudio "badjoke" "./assets/audio/badjoke.mp3">>
+<<cacheaudio "tourescape" "./assets/audio/tourescape.mp3">>
 <<waitforaudio>>
 
 
@@ -942,7 +948,7 @@ Not to show off us
 But to show off what this type of digital play can do. 
 
     
-<<timed 9s>><<goto "2">><</timed>>
+<<timed 13s>><<goto "2">><</timed>>
 </p>
 
 </main>
@@ -1157,9 +1163,8 @@ And to get you to tell us who she is next to
 We can even use that to bring these characters to life
 And hear a bad joke from the Joker. 
 
-
-Click <<button "here">><<audio "coneytheme" play>><<timed 5s>><<replace "#btnMount">><<button "Next">><<goto "9">><</button>><</replace>><</timed>><</button>> to hear the joker
-
+<div class="img joker"><<button [img[./assets/img/joker.jpeg]]>><<audio "badjoke" play>><<timed 5s>><<replace "#btnMount">><<button "Next">><<goto "9">><</button>><</replace>><</timed>><</button>></div>
+Click the Joker to hear the bad joke
 
 <div id="btnMount"></div>
 
@@ -1216,7 +1221,7 @@ A jar of milk is strange.
   <div id="msgMount" ></div>
   <<timed 3s>>
   Incoming Message -  <<button "Read">><<goto "message">><</button>><</timed>>
-  <iframe id="iframeAudio" src="https://youhavefoundconey.net/CG/assets/audio/static.mp3" style="display:none" allow="autoplay" ></iframe>
+  <iframe id="iframeAudio" src="https://youhavefoundconey.net/CG/assets/audio/tourescape.mp3" style="display:none" allow="autoplay" ></iframe>
   <div class="filmgrain"></div>
   <div id="noise" class="noise">
     <div class="glitch-shape1"></div>
@@ -1310,121 +1315,3 @@ But we hope it has given an insight into what we can make together.
 
 
 
-:: CONEYFADEIN
-
-<div class="whitebg"></div><div id="tohide" class="whitebgfadeout"></div>
-<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
-<span style = "font-size:50px">Coney x Barbican Box</span>
-<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
-<<textbox "$startcode" "" >></div>
-<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><</button>></div>
-
-</div><<audio "coneytheme" play>><<timed 8.5s>><<goto "CONEY">><</timed>>
-
-:: CONEY
-<div class="whitebg"></div>
-<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
-<span style = "font-size:50px">Coney x Barbican Box</span>
-<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
-<<textbox "$startcode" "" >></div>
-<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><<set $startcode to $startcode.toLowerCase()>>
-<<if $startcode is "landing">><<set $stage to 1>><<goto "TRANSTEST1">>
-
-<<else>>
-<<replace "#toChange">><span style = "color:red">INVALID CODEWORD. PLEASE TRY AGAIN.</span><</replace>><</if>><</button>></div>
-
-</div>
-
-
-:: TRANSTEST0
-<div class="whitebg"></div><div class="whitebgfadein"></div>
-<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
-<span style = "font-size:50px">Coney x Barbican Box</span>
-<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
-<<textbox "$startcode" "" >></div>
-<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><</button>></div>
-
-</div><<audio "coneytheme" play>><<timed 8.5s>><<goto "TRANSTEST9">><</timed>>
-
-:: TRANSTEST1
-
-<div class="whitebg"></div><div class="whitebgfadein"></div>
-<img class = "center-fit" style = "width:250px" src="./assets/img/ConeyLogo.png" ><div style = "text-align: center">
-<span style = "font-size:50px">Coney x Barbican Box</span>
-<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
-<<textbox "$startcode" "" >></div>
-<div style = "font-family:'Arcon', sans-serif"><<button "ENTER" >><</button>></div>
-
-</div><<audio "instatic" play>><<timed 3.2s>><<goto "TRANSTEST2">><</timed>>
-
-
-:: TRANSTEST2
-<img class = "coneylogoglitch" src="./assets/img/ConeyLogo.png" ><div style = "text-align:right;">
-
-
-
-
-
-
-<span style = "font-size:50px">                   Coney x Barbican Box</span>
-
-<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
-<<textbox "$startcode" "" >></div>
-<div style = "font-family:'Arcon', sans-serif; text-align:none"><<button "ENTER" >><</button>></div>
-
-<div class="noise"></div><div class="glitchwhitebg"><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 0.5s>><<goto "TRANSTEST3">><</timed>>
-
-:: TRANSTEST3
-<div class="whitebg"></div>
-
-<<timed 0.5s>><<goto "TRANSTEST4">><</timed>>
-
-:: TRANSTEST4
-<img class = "coneylogoglitch" src="./assets/img/ConeyLogo.png" ><div style = "text-align:right;">
-
-
-
-
-
-
-<span style = "font-size:50px">                   Coney x Barbican Box</span>
-
-<div style = "font-family:'Arcon', sans-serif"><span id = "toChange">Enter codeword to enter</span>
-<<textbox "$startcode" "" >></div>
-<div style = "font-family:'Arcon', sans-serif; text-align:none"><<button "ENTER" >><</button>></div>
-
-<div class="noise"></div><div class="glitchwhitebg"><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 1.75s>><<goto "TRANSTEST5">><</timed>>
-
-
-:: TRANSTEST5
-<img class = "ConeyLogoglitch" style = "width:500px" src="./assets/img/psalogo_2.png" >
-
-<div class="noise"></div><div class="psabg"></div><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 1s>><<goto "TRANSTEST6">><</timed>>
-
-:: TRANSTEST6
-<div class="psabg"></div><img class="psalogobright" src="./assets/img/psalogo_2.png"><<timed 2s>><<goto "TRANSTEST7">><</timed>>
-
-:: TRANSTEST7
-<img class = "ConeyLogoglitch" style = "width:500px" src="./assets/img/psalogo_2.png" >
-
-<div class="noise"></div><div class="psabg"></div><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 2.5s>><<goto "TRANSTEST10">><</timed>>
-
-
-:: TRANSTEST8
-<div class="psabg"></div><img class="psalogobright" src="./assets/img/psalogo_2.png"><<timed 1.5s>><<goto "TRANSTEST9">><</timed>>
-
-:: TRANSTEST9
-<img class = "ConeyLogoglitch" style = "width:500px" src="./assets/img/psalogo_2.png" >
-
-<div class="noise"></div><div class="psabg"></div><div class="glitch-shape3"></div><div class="glitch-shape4"></div><div class="glitch-shape5"></div><div class="glitch-shape1"></div><div class="glitch-shape2"></div><<timed 0.2s>><<goto "TRANSTEST10">><</timed>>
-
-:: TRANSTEST10
-<div class="psabg"></div><img class="psalogobright" src="./assets/img/psalogo_2.png"><<nobr>>
-<<timed 1.2s>>
-<<goto "PSAFADEOUT">>
-<</timed>>
-<</nobr>>
-
-:: PSAFADEOUT
-
-<div class="psabg"></div><img class="imgfadeouthalf" src="./assets/img/psalogo_2.png">

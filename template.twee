@@ -18,11 +18,11 @@ Common Ground Template
 
 @font-face {
     font-family: "Arcon";
-    src: url("./assets/fonts/arcon/Arcon-Regular.otf");
+    src: url("https://youhavefoundconey.net/CG/what/assets/fonts/arcon/Arcon-Regular.otf");
 }
 @font-face {
     font-family: "SpecialElite";
-    src: url("./assets/fonts/special-elite/SpecialElite.ttf");
+    src: url("https://youhavefoundconey.net/CG/what/assets/fonts/special-elite/SpecialElite.ttf");
 }
 
 body {
@@ -177,7 +177,7 @@ input[type=text] {
 	justify-content: center;
 	align-items:center;
 	flex-direction: column;
-background-image: url("./assets/img/coneybg.jpg");
+background-image: url("https://youhavefoundconey.net/CG/what/assets/img/coneybg.jpg");
     color: #000 ;
     height:100vh;
     width:100vw;
@@ -326,7 +326,7 @@ font-size: 3rem;
   bottom: -500px;
   left: -500px;
   z-index: -1;
-  background: transparent url("./assets/img/filmgrain.gif") 0 0;
+  background: transparent url("https://youhavefoundconey.net/CG/what/assets/img/filmgrain.gif") 0 0;
   background-size: 1000px;
   opacity: 0.25;
   overflow: hidden
@@ -408,7 +408,7 @@ font-size: 3rem;
 }
 
 .psabg{
-  background-image: url(./assets/img/coneybg_dark.jpg);  
+  background-image: url(https://youhavefoundconey.net/CG/what/assets/img/coneybg_dark.jpg);  
     position:absolute;
 	top:0%;
   	bottom:0%;
@@ -490,7 +490,7 @@ font-size: 3rem;
   bottom: -500px;
   left: -500px;
   z-index: -1;
-  background: transparent url(./assets/img/filmgrain.gif) 0 0;
+  background: transparent url(https://youhavefoundconey.net/CG/what/assets/img/filmgrain.gif) 0 0;
   background-size: 1000px;
   opacity: 0.25;
   overflow: hidden
@@ -785,7 +785,7 @@ animation: .8s delete infinite alternate;
   bottom: -500px;
   left: -500px;
   z-index: 10;
-  background: transparent url(./assets/img/noise.png) 0 0;
+  background: transparent url(https://youhavefoundconey.net/CG/what/assets/img/noise.png) 0 0;
   background-size: 320px 320px;
 	opacity: .75;
 	animation: noise 1s steps(8,end) infinite both;
@@ -893,15 +893,15 @@ $(document.head).find('#style-ui-bar').remove();
 }();
 
 :: StoryInit
-<<cacheaudio "badjoke" "./assets/audio/badjoke.mp3">>
-<<cacheaudio "tourescape" "./assets/audio/tourescape.mp3">>
+<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<cacheaudio "tourescape" "https://youhavefoundconey.net/CG/what/assets/audio/tourescape.mp3">>
 <<waitforaudio>>
 
 
 :: landing {"position":"425,75","size":"100,100"}
 <main class="landing">
 <div class="landing-wrapper">
-    <img src="./assets/img/coney-logo-white.jpg" class="logo  "><h1 id="coderesult" class="code-title">Enter codeword:</h1>
+    <img src="https://youhavefoundconey.net/CG/what/assets/img/coney-logo-white.jpg" class="logo  "><h1 id="coderesult" class="code-title">Enter codeword:</h1>
     \/% PASSWORD FEEDBACK %/
           \   <div id="resultbutton">
           \/% PASSWORD INPUT %/
@@ -989,9 +989,9 @@ It means you can give people options like…
 Do you want to go through...
 
 <div class="door-container">
-<<timed 4s>><div class="door-item"><span>DOOR A</span><<button [img["./assets/img/door-white.png"][Door A]]>><<goto "Door A">><</button>></div><</timed>>
+<<timed 4s>><div class="door-item"><span>DOOR A</span><<button [img["https://youhavefoundconey.net/CG/what/assets/img/door-white.png"][Door A]]>><<goto "Door A">><</button>></div><</timed>>
 <<timed 5s>><div class="door-item"><span>or</span></div><</timed>>
-<<timed 6s>><div class="door-item"><span>DOOR B</span><<button [img["./assets/img/door-white.png"][Door B]]>><<goto "Door B">><</button>></div><</timed>>
+<<timed 6s>><div class="door-item"><span>DOOR B</span><<button [img["https://youhavefoundconey.net/CG/what/assets/img/door-white.png"][Door B]]>><<goto "Door B">><</button>></div><</timed>>
 </div>
 </main>
 
@@ -1003,13 +1003,13 @@ Do you want to go down the <<button "corridor ">><<goto "Corridor">><</button>> 
 
 :: Corridor
 <main class="main-section">
-<div class="animal-container"><img src="./assets/img/monster.png" class="animal"></div>
+<div class="animal-container"><img src="https://youhavefoundconey.net/CG/what/assets/img/monster.png" class="animal"></div>
 <<timed 5s>><<goto "4">><</timed>>
 </main>
 
 :: Cellar
 <main class="main-section">
-<div class="animal-container"><img src="./assets/img/rabbit.png" class="animal"></div>
+<div class="animal-container"><img src="https://youhavefoundconey.net/CG/what/assets/img/rabbit.png" class="animal"></div>
 <<timed 5s>><<goto "4">><</timed>>
 </main>
 
@@ -1022,14 +1022,14 @@ Do you want to go onto the <<button "roof">><<goto "Roof">><</button>> or the  <
 
 :: Roof
 <main class="main-section">
-<div class="animal-container"><img src="./assets/img/pigeon.png" class="animal"></div>
+<div class="animal-container"><img src="https://youhavefoundconey.net/CG/what/assets/img/pigeon.png" class="animal"></div>
 <<timed 5s>><<goto "4">><</timed>>
 
 </main>
 
 :: Balcony
 <main class="main-section">
-<div class="animal-container"><img src="./assets/img/hippo.png" class="animal"></div>
+<div class="animal-container"><img src="https://youhavefoundconey.net/CG/what/assets/img/hippo.png" class="animal"></div>
 <<timed 5s>><<goto "4">><</timed>>
 
 </main>
@@ -1060,7 +1060,7 @@ Like...
 
 
 :: 5b [t8n.typewriter-4]{"position":"425,575","size":"100,100"}
-<main class="main-section"><img src="./assets/img/parrots.png" class="parrots" id="parrotPic">
+<main class="main-section"><img src="https://youhavefoundconey.net/CG/what/assets/img/parrots.png" class="parrots" id="parrotPic">
 How many parrots do you see? 
 <div id="coderesult"></div>
  \/% CODEWORD FEEDBACK %/
@@ -1163,7 +1163,7 @@ And to get you to tell us who she is next to
 We can even use that to bring these characters to life
 And hear a bad joke from the Joker. 
 
-<div class="img joker"><<button [img[./assets/img/joker.jpeg]]>><<audio "badjoke" play>><<timed 5s>><<replace "#btnMount">><<button "Next">><<goto "9">><</button>><</replace>><</timed>><</button>></div>
+<div class="img joker"><<button [img[https://youhavefoundconey.net/CG/what/assets/img/joker.jpeg]]>><<audio "badjoke" play>><<timed 5s>><<replace "#btnMount">><<button "Next">><<goto "9">><</button>><</replace>><</timed>><</button>></div>
 Click the Joker to hear the bad joke
 
 <div id="btnMount"></div>
@@ -1202,7 +1202,7 @@ A jar of milk is strange.
 
 <main class="main-section">
 <<timed 0s>>We could setup a tour <</timed>>
-<<timed 1s>><img id="logoToGlitch" class="logoToGlitch" src="./assets/img/ConeyLogo.png" ><</timed>>
+<<timed 1s>><img id="logoToGlitch" class="logoToGlitch" src="https://youhavefoundconey.net/CG/what/assets/img/ConeyLogo.png" ><</timed>>
 
 
 <<timed 3s>>and then break it<</timed>>
@@ -1311,7 +1311,18 @@ Apologies
 
 But we hope it has given an insight into what we can make together. 
 
+ <<timed 6s>><<button "Next">><<goto "17">><</button>><</timed>>
+
 </main>
 
+
+:: 17 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
+
+<main class="main-section">
+Oh, and if you haven't seen - we can also make something magical happen on phones too. 
+
+Text the word MAGIC to 07400179362 and we'll show you. 
+
+</main>
 
 

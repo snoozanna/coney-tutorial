@@ -18,11 +18,11 @@ Common Ground Template
 
 @font-face {
     font-family: "Arcon";
-    src: url("https://youhavefoundconey.net/CG/what/assets/fonts/arcon/Arcon-Regular.otf");
+    src: url("./assets/fonts/arcon/Arcon-Regular.otf");
 }
 @font-face {
     font-family: "SpecialElite";
-    src: url("https://youhavefoundconey.net/CG/what/assets/fonts/special-elite/SpecialElite.ttf");
+    src: url("./assets/fonts/special-elite/SpecialElite.ttf");
 }
 
 body {
@@ -1199,17 +1199,29 @@ A jar of milk is strange.
 
 
 :: 11 [t8n.typewriter-4]{"position":"425,1100","size":"100,100"}
-
 <main class="main-section">
-<<timed 0s>>We could setup a tour <</timed>>
-<<timed 1s>><img id="logoToGlitch" class="logoToGlitch" src="https://youhavefoundconey.net/CG/what/assets/img/ConeyLogo.png" ><</timed>>
+We could setup a tour
 
+and then break it
 
-<<timed 3s>>and then break it<</timed>>
-<<timed 4s>><<addclass "#logoToGlitch" "coneylogoglitch">><</timed>>
-    /* <<timed 5s>><<goto "glitch">><</timed>> */
 </main>
-<<timed 6s>><<goto "glitch">><</timed>>
+<<timed 3s>><<goto "tour1">><</timed>>
+
+:: tour1 [t8n.typewriter-4]
+<main class="main-section"><img id="logoToGlitch" class="logoToGlitch" src="https://youhavefoundconey.net/CG/what/assets/img/ConeyLogo.png" >
+HELLO
+
+WELCOME TO THE TOUR TODAY
+
+STAY EXACTLY WHERE YOU ARE AND FOLLOW THE OFFICIAL INSTRUCTIONS
+
+WE'LL KEEP YOU SAFE
+
+IF YOU LOOK TO THE LEFT YOU WILL SEE
+
+</main>
+<<timed 7s>><<addclass "#logoToGlitch" "coneylogoglitch">><</timed>>
+<<timed 9s>><<goto "glitch">><</timed>>
 
 
 
@@ -1220,25 +1232,28 @@ A jar of milk is strange.
 
   <div id="msgMount" ></div>
   <<timed 3s>>
-  Incoming Message -  <<button "Read">><<goto "message">><</button>><</timed>>
-  <iframe id="iframeAudio" src="https://youhavefoundconey.net/CG/assets/audio/tourescape.mp3" style="display:none" allow="autoplay" ></iframe>
+  Incoming Message -  <<button "Click to receive">><<audio "tourescape" play>><<timed 5s>><<replace "#btnMount">><<button "Message received">><<goto "tourConfirm">><</button>><</replace>><</timed>><</button>><</timed>>
+  <iframe id="iframeAudio" src="https://youhavefoundconey.net/CG/assets/audio/static.mp3" style="display:none" allow="autoplay" ></iframe>
   <div class="filmgrain"></div>
   <div id="noise" class="noise">
     <div class="glitch-shape1"></div>
     <div class="glitch-shape2"></div>
     <div class="glitch-shape3"></div>
+    <div id="btnMount"></div>
   </div>
 </main>
+
    <<timed 4s>><<removeclass "#noise" "noise">><</timed>>
 
 
-:: message []
+:: tourConfirm [t8n.typewriter-4]
 <main class="main-section">
 <div class="message-wrapper">
   <<timed 1.5s>><div class="message-circle"></div><</timed>>
-<<timed 2s>><div class="message-container">I'M OUT OF THE ROOM!
+<<timed 2s>><div class="message-container">GET OUT OF THE ROOM NOW !!
+GO! GO! GO!
 </div><</timed>></div>
-    <<timed 3s>> <<button "Message received">><<goto "12">><</button>><</timed>>
+    <<timed 3s>> <<button "I'm out of the room">><<goto "12">><</button>><</timed>>
 </main>
 
 

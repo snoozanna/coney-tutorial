@@ -102,11 +102,11 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 @font-face {
     font-family: "Arcon";
-    src: url("https://youhavefoundconey.net/CG/what/assets/fonts/arcon/Arcon-Regular.otf");
+    src: url("./assets/fonts/arcon/Arcon-Regular.otf");
 }
 @font-face {
     font-family: "SpecialElite";
-    src: url("https://youhavefoundconey.net/CG/what/assets/fonts/special-elite/SpecialElite.ttf");
+    src: url("./assets/fonts/special-elite/SpecialElite.ttf");
 }
 
 body {
@@ -1190,39 +1190,52 @@ A jar of milk is strange.
 
     &lt;&lt;timed 4s&gt;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto &quot;11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="23" name="11" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
-&lt;&lt;timed 0s&gt;&gt;We could setup a tour &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 1s&gt;&gt;&lt;img id=&quot;logoToGlitch&quot; class=&quot;logoToGlitch&quot; src=&quot;https://youhavefoundconey.net/CG/what/assets/img/ConeyLogo.png&quot; &gt;&lt;&lt;/timed&gt;&gt;
+We could setup a tour
 
+and then break it
 
-&lt;&lt;timed 3s&gt;&gt;and then break it&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 4s&gt;&gt;&lt;&lt;addclass &quot;#logoToGlitch&quot; &quot;coneylogoglitch&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-    /* &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;glitch&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt; */
 &lt;/main&gt;
-&lt;&lt;timed 6s&gt;&gt;&lt;&lt;goto &quot;glitch&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="glitch" tags="" position="475,350" size="100,100">/* TODO work on the message  */
+&lt;&lt;timed 3s&gt;&gt;&lt;&lt;goto &quot;tour1&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="tour1" tags="t8n.typewriter-4" position="475,350" size="100,100">&lt;main class=&quot;main-section&quot;&gt;&lt;img id=&quot;logoToGlitch&quot; class=&quot;logoToGlitch&quot; src=&quot;https://youhavefoundconey.net/CG/what/assets/img/ConeyLogo.png&quot; &gt;
+HELLO
+
+WELCOME TO THE TOUR TODAY
+
+STAY EXACTLY WHERE YOU ARE AND FOLLOW THE OFFICIAL INSTRUCTIONS
+
+WE&#39;LL KEEP YOU SAFE
+
+IF YOU LOOK TO THE LEFT YOU WILL SEE
+
+&lt;/main&gt;
+&lt;&lt;timed 7s&gt;&gt;&lt;&lt;addclass &quot;#logoToGlitch&quot; &quot;coneylogoglitch&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 9s&gt;&gt;&lt;&lt;goto &quot;glitch&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="glitch" tags="" position="600,350" size="100,100">/* TODO work on the message  */
 &lt;main class=&quot;main-section&quot;&gt;
 
   &lt;div id=&quot;msgMount&quot; &gt;&lt;/div&gt;
   &lt;&lt;timed 3s&gt;&gt;
-  Incoming Message -  &lt;&lt;button &quot;Read&quot;&gt;&gt;&lt;&lt;goto &quot;message&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
-  &lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://youhavefoundconey.net/CG/assets/audio/tourescape.mp3&quot; style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;
+  Incoming Message -  &lt;&lt;button &quot;Click to receive&quot;&gt;&gt;&lt;&lt;audio &quot;tourescape&quot; play&gt;&gt;&lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#btnMount&quot;&gt;&gt;&lt;&lt;button &quot;Message received&quot;&gt;&gt;&lt;&lt;goto &quot;tourConfirm&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
+  &lt;iframe id=&quot;iframeAudio&quot; src=&quot;https://youhavefoundconey.net/CG/assets/audio/static.mp3&quot; style=&quot;display:none&quot; allow=&quot;autoplay&quot; &gt;&lt;/iframe&gt;
   &lt;div class=&quot;filmgrain&quot;&gt;&lt;/div&gt;
   &lt;div id=&quot;noise&quot; class=&quot;noise&quot;&gt;
     &lt;div class=&quot;glitch-shape1&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;glitch-shape2&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;glitch-shape3&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;btnMount&quot;&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/main&gt;
-   &lt;&lt;timed 4s&gt;&gt;&lt;&lt;removeclass &quot;#noise&quot; &quot;noise&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="message" tags="" position="600,350" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+
+   &lt;&lt;timed 4s&gt;&gt;&lt;&lt;removeclass &quot;#noise&quot; &quot;noise&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="tourConfirm" tags="t8n.typewriter-4" position="725,350" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 &lt;div class=&quot;message-wrapper&quot;&gt;
   &lt;&lt;timed 1.5s&gt;&gt;&lt;div class=&quot;message-circle&quot;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 2s&gt;&gt;&lt;div class=&quot;message-container&quot;&gt;I&#39;M OUT OF THE ROOM!
+&lt;&lt;timed 2s&gt;&gt;&lt;div class=&quot;message-container&quot;&gt;GET OUT OF THE ROOM NOW !!
+GO! GO! GO!
 &lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;/div&gt;
-    &lt;&lt;timed 3s&gt;&gt; &lt;&lt;button &quot;Message received&quot;&gt;&gt;&lt;&lt;goto &quot;12&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="26" name="12" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+    &lt;&lt;timed 3s&gt;&gt; &lt;&lt;button &quot;I&#39;m out of the room&quot;&gt;&gt;&lt;&lt;goto &quot;12&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="27" name="12" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 See that was fun. 
 
     &lt;&lt;timed 5s&gt;&gt;&lt;&lt;goto &quot;13&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="27" name="13" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="28" name="13" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 We can use this platform as a way to facilitate players in a game
 
 To give them instructions and get them prepared to play
@@ -1236,7 +1249,7 @@ So we will try to slowly introduce it and then hopefully they’ll be more comfo
 We want them to enjoy playing
 
  &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto &quot;14&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="28" name="14" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="29" name="14" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 And we may want the play to start a conversation with them
 
 A conversation perhaps on something we want to talk to them about
@@ -1248,7 +1261,7 @@ But perhaps is hard to have a direct, sit down, chat about
 So we make a game that helps make that easier. 
 
  &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto &quot;15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="29" name="15" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="30" name="15" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 We want to have a good conversation. 
 
 Bad conversations are crap, and to be honest, pointless.
@@ -1257,7 +1270,7 @@ So, we want to make a game that has a point.
 
 
  &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto &quot;16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="30" name="16" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="31" name="16" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 Well, there we go
 
 We’ve been rambling on
@@ -1268,7 +1281,7 @@ But we hope it has given an insight into what we can make together.
 
  &lt;&lt;timed 6s&gt;&gt;&lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto &quot;17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;/main&gt;</tw-passagedata><tw-passagedata pid="31" name="17" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
+&lt;/main&gt;</tw-passagedata><tw-passagedata pid="32" name="17" tags="t8n.typewriter-4" position="425,1100" size="100,100">&lt;main class=&quot;main-section&quot;&gt;
 Oh, and if you haven&#39;t seen - we can also make something magical happen on phones too. 
 
 Text the word MAGIC to 07400179362 and we&#39;ll show you. 
